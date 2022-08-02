@@ -183,10 +183,14 @@ function finished() {
             }
             highScores.push(finalScore);
             var newScore = JSON.stringify(highScores);
-            localStorage.setItem("High Scores: ", newScore);
+            localStorage.setItem("highScores", newScore);
             // Travels to final page
             window.location.replace("./high-scores.html");
         }
     });
 
-}
+};
+var viewHighScore = document.querySelector("#highscorebutton");
+viewHighScore.addEventListener("click", function () {
+    window.location.replace("./high-scores.html");
+});
